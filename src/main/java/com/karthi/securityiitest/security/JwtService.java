@@ -80,7 +80,6 @@ public class JwtService {
                 .getPayload();
     }
 
-
     // SIGNING KEY
 
     private SecretKey getSigningKey() {
