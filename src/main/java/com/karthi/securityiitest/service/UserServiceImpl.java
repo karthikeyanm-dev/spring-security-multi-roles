@@ -1,5 +1,6 @@
 package com.karthi.securityiitest.service;
 
+import com.karthi.securityiitest.model.Role;
 import com.karthi.securityiitest.model.User;
 import com.karthi.securityiitest.repo.UserRepo;
 import com.karthi.securityiitest.security.UserPrincipal;
@@ -29,5 +30,9 @@ public class UserServiceImpl implements UserDetailsService {
 
     public List<User> findAllUsers(){
         return userRepo.findAll();
+    }
+
+    public List<User> findAllUsersByRole(Role role){
+        return userRepo.findAllByRole(role);
     }
 }
